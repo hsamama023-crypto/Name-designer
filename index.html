@@ -3,156 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stylish Name Maker + TikTok Caption Generator - By Samama</title>
-<meta name="description" content="500+ Stylish Names, TikTok Captions, Viral Hashtags - PUBG, Instagram, TikTok">
+<title>1000+ Stylish Names - Girls & Boys | By Samama</title>
 <meta name="theme-color" content="#FF006A">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:radial-gradient(circle at 0% 0%, #FF006A 0%, #8A00FF 40%, #000 85%);min-height:100vh;color:#fff}
-.header{text-align:center;padding:22px 16px;background:rgba(0,0,0,0.7);backdrop-filter:blur(15px);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,0.1)}
-.header h1{font-size:24px;font-weight:800;line-height:1.1}.header h1 span{background:linear-gradient(90deg,#FF006A,#FFD600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.header p{font-size:10px;color:#aaa;margin-top:6px;letter-spacing:1px}
-.container{max-width:460px;margin:0 auto;padding:14px}
-.box{background:rgba(0,0,0,0.5);border:1.5px solid rgba(255,255,255,0.12);border-radius:20px;padding:16px}
-.box input{width:100%;padding:14px 16px;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;color:#fff;font-size:16px;font-weight:600;outline:none;text-align:center}
+body{background:#000;color:#fff;min-height:100vh}
+.header{padding:20px;text-align:center;position:sticky;top:0;z-index:10;background:rgba(0,0,0,0.9);backdrop-filter:blur(15px);border-bottom:1px solid #222}
+.header h1{font-size:22px;font-weight:800}
+.mainTab{display:flex;gap:10px;padding:12px;background:#000;position:sticky;top:75px;z-index:9}
+.mainTab div{flex:1;padding:14px;text-align:center;border-radius:100px;font-weight:800;font-size:13px;cursor:pointer;border:2px solid #222}
+.mainTab .girls{background:linear-gradient(135deg,#FF006A,#FF8A9B);color:#fff;border-color:transparent;box-shadow:0 4px 15px rgba(255,0,106,0.3)}
+.mainTab .boys{background:#111;color:#888}
+.mainTab .boys.active{background:linear-gradient(135deg,#0066FF,#00D4FF);color:#fff;border-color:transparent;box-shadow:0 4px 15px rgba(0,102,255,0.3)}
+.mainTab .girls.active2{background:#111;color:#888;box-shadow:none}
+.container{max-width:480px;margin:0 auto;padding:12px}
+.box{background:#111;border:1px solid #222;border-radius:18px;padding:14px}
+.box input{width:100%;padding:15px;background:#000;border:1.5px solid #333;border-radius:12px;color:#fff;font-size:16px;font-weight:700;text-align:center;outline:none}
+.box input::placeholder{color:#555}
 .box input:focus{border-color:#FF006A}
-.btn{width:100%;padding:14px;background:linear-gradient(90deg,#FF006A,#FFD600);border:0;border-radius:100px;color:#000;font-weight:800;font-size:15px;margin-top:12px;cursor:pointer;box-shadow:0 6px 20px rgba(255,0,106,0.4)}
-.tabs{display:flex;gap:8px;overflow:auto;padding:14px 0 8px}.tabs::-webkit-scrollbar{display:none}
-.tab{padding:8px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:11px;font-weight:700;white-space:nowrap;cursor:pointer}.tab.active{background:#fff;color:#000}
-.sectionTitle{font-size:12px;font-weight:800;margin:18px 0 8px;letter-spacing:1.5px;color:#FF8AAF}
-.card{background:linear-gradient(145deg, rgba(15,0,20,0.8), rgba(0,0,0,0.7));border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:12px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-.name{font-size:16px;flex:1;padding-right:10px;word-break:break-all}
-.copy{padding:7px 14px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);border-radius:100px;color:#fff;font-size:11px;font-weight:700;cursor:pointer;min-width:64px}.copy.copied{background:#00FF88;color:#000}
-.hash{font-size:12px;color:#FFD600;line-height:1.6}
-.foot{text-align:center;padding:20px;font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:2px}.foot b{color:#FF006A}
+.btn{width:100%;padding:14px;background:linear-gradient(90deg,#FF006A,#FFD600);border:0;border-radius:100px;color:#000;font-weight:800;font-size:14px;margin-top:10px;cursor:pointer}
+.subTabs{display:flex;gap:6px;overflow:auto;padding:12px 0}.subTabs::-webkit-scrollbar{display:none}
+.subTab{padding:7px 12px;background:#111;border:1px solid #222;border-radius:100px;font-size:10px;font-weight:700;white-space:nowrap;cursor:pointer}.subTab.active{background:#fff;color:#000}
+.card{background:#0F0F0F;border:1px solid #222;border-radius:14px;padding:12px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center}
+.card.girlCard{border-left:3px solid #FF006A}
+.card.boyCard{border-left:3px solid #00D4FF}
+.name{font-size:15px;flex:1;padding-right:8px;word-break:break-all}
+.copy{padding:6px 12px;background:#fff;color:#000;border:0;border-radius:100px;font-size:11px;font-weight:800;cursor:pointer;min-width:60px}.copy.copied{background:#00FF88}
+.count{font-size:10px;color:#666;margin:8px 0;font-weight:700;letter-spacing:1px}
+.foot{text-align:center;padding:18px;font-size:8px;color:#333;letter-spacing:2px}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>STYLISH NAME <span>MAKER</span> 🔥</h1>
-<p>500+ FONTS • 100+ TIKTOK CAPTIONS • 100+ VIRAL HASHTAGS</p>
+<h1 id="title">💖 1000+ GIRLS & BOYS NAMES 💙</h1>
+<p style="font-size:9px;color:#666;margin-top:4px">LARKIYON KE LIYE CUTE • LARKON KE LIYE ATTITUDE</p>
 </div>
+
 <div class="container">
+<div class="mainTab">
+<div id="girlsBtn" class="girls" onclick="setGender('girls')">💖 GIRLS 500</div>
+<div id="boysBtn" class="boys" onclick="setGender('boys')">💙 BOYS 500</div>
+</div>
+
 <div class="box">
-<input id="nameInput" type="text" placeholder="Apna Naam Likho... Samama" value="Samama" oninput="generateAll()">
-<button class="btn" onclick="generateAll()">✨ GENERATE VIRAL STYLE ✨</button>
+<input id="nameInput" type="text" placeholder="write name" value="" oninput="generate()">
+<button class="btn" onclick="generate()">✨ GENERATE STYLES ✨</button>
 </div>
 
-<div class="tabs">
-<div class="tab active" onclick="setTab('names',this)">🔥 Stylish Names</div>
-<div class="tab" onclick="setTab('pubg',this)">🎮 PUBG Style</div>
-<div class="tab" onclick="setTab('caption',this)">📝 TikTok Captions</div>
-<div class="tab" onclick="setTab('hashtag',this)">#️⃣ Viral Hashtags</div>
-</div>
-
-<div id="sectionTitle" class="sectionTitle">🔥 500+ WORLD FAMOUS STYLISH NAMES</div>
+<div class="subTabs" id="subTabs"></div>
+<div class="count" id="count"></div>
 <div id="list"></div>
 
-<div class="foot">MADE BY <b>SAMAMA</b> • GHAKHAR • GUJRANWALA<br>GO VIRAL ON TIKTOK 🚀</div>
+<div class="foot">MADE WITH 💖 BY SAMAMA • GHAKHAR • 1000+ STYLES</div>
 </div>
 
 <script>
-let curTab='names';
-const fancyMap={
- 'a':['𝕒','𝖆','𝒶','𝓪','𝔞','ａ','ᴀ','ₐ','α','₳'],'b':['𝕓','𝖇','𝒷','𝓫','𝔟','ｂ','ʙ','ᵦ','в'],'c':['𝕔','𝖈','𝒸','𝓬','𝔠','ｃ','ᴄ','¢'],'d':['𝕕','𝖉','𝒹','𝓭','𝔡','ｄ','ᴅ'],'e':['𝕖','𝖊','𝑒','𝓮','𝔢','ｅ','ᴇ','ₑ','є'],'f':['𝕗','𝖋','𝒻','𝓯','𝔣','ｆ','ғ'],'g':['𝕘','𝖌','𝑔','� g','𝔤','ｇ','ɢ'],'h':['𝕙','𝖍','𝒽','𝓱','𝔥','ｈ','ʜ'],'i':['𝕚','𝖎','𝒾','𝓲','𝔦','ｉ','ɪ','ᵢ','ι'],'j':['𝕛','𝖏','𝒿','𝓳','𝔧','ｊ','ᴊ'],'k':['𝕜','𝖐','𝓀','𝓴','𝔨','ｋ','ᴋ'],'l':['𝕝','𝖑','𝓁','𝓵','𝔩','ｌ','ʟ'],'m':['𝕞','𝖒','𝓂','𝓶','𝔪','ｍ','ᴍ'],'n':['𝕟','𝖓','𝓃','𝓷','𝔫','ｎ','ɴ'],'o':['𝕠','𝖔','𝑜','𝓸','𝔬','ｏ','ᴏ','ₒ','σ'],'p':['𝕡','𝖕','𝓅','𝓹','𝔭','ｐ','ᴘ'],'q':['𝕢','𝖖','𝓆','𝓺','𝔮','ｑ','ǫ'],'r':['𝕣','𝖗','𝓇','𝓻','𝔯','ｒ','ʀ'],'s':['𝕤','𝖘','𝓈','𝓼','𝔰','ｓ','ꜱ','ₛ'],'t':['𝕥','𝖙','𝓉','𝓽','𝔱','ｔ','ᴛ'],'u':['𝕦','𝖚','𝓊','𝓾','𝔲','ｕ','ᴜ','ᵤ'],'v':['𝕧','𝖛','𝓋','𝓿','𝔳','ｖ','ᴠ'],'w':['𝕨','𝖜','𝓌','𝔀','𝔴','ｗ','ᴡ'],'x':['𝕩','𝖝','𝓍','𝔁','𝔵','ｘ','x'],'y':['𝕪','𝖞','𝓎','𝔂','𝔶','ｙ','ʏ'],'z':['𝕫','𝖟','𝓏','𝔃','𝔷','ｚ','ᴢ']
+let gender='girls';
+let subCat='all';
+
+const fancy=[
+t=>t,
+t=>t.split('').map(c=>{let m={'a':'ᴀ','b':'ʙ','c':'ᴄ','d':'ᴅ','e':'ᴇ','f':'ғ','g':'ɢ','h':'ʜ','i':'ɪ','j':'ᴊ','k':'ᴋ','l':'ʟ','m':'ᴍ','n':'ɴ','o':'ᴏ','p':'ᴘ','q':'ǫ','r':'ʀ','s':'ꜱ','t':'ᴛ','u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x','y':'ʏ','z':'ᴢ'};return m[c.toLowerCase()]||c}).join(''),
+t=>t.split('').map(c=>{let m={'a':'𝒶','b':'𝒷','c':'𝒸','d':'𝒹','e':'𝑒','f':'𝒻','g':'𝑔','h':'𝒽','i':'𝒾','j':'𝒿','k':'𝓀','l':'𝓁','m':'𝓂','n':'𝓃','o':'𝑜','p':'𝓅','q':'𝓆','r':'𝓇','s':'𝓈','t':'𝓉','u':'𝓊','v':'𝓋','w':'𝓌','x':'𝓍','y':'𝓎','z':'𝓏'};return m[c.toLowerCase()]||c}).join(''),
+t=>t.split('').map(c=>{let m={'a':'𝓪','b':'𝓫','c':'𝓬','d':'𝓭','e':'𝓮','f':'𝓯','g':'𝓰','h':'𝓱','i':'𝓲','j':'𝓳','k':'𝓴','l':'𝓵','m':'𝓶','n':'𝓷','o':'𝓸','p':'𝓹','q':'𝓺','r':'𝓻','s':'𝓼','t':'𝓽','u':'𝓾','v':'𝓿','w':'𝔀','x':'𝔁','y':'𝔂','z':'𝔃'};return m[c.toLowerCase()]||c}).join('')
+];
+
+const girlsWraps={
+all:[
+s=>`꧁༺ ${s} ༻꧂`,s=>`•°• ${s} •°•`,s=>`♡ ${s} ♡`,s=>`🌸 ${s} 🌸`,s=>`💖 ${s} 💖`,s=>`✿ ${s} ✿`,s=>`🌷 ${s} 🌷`,s=>`💅 ${s} 💅`,s=>`🦋 ${s} 🦋`,s=>`🌙 ${s} 🌙`,s=>`💫 ${s} 💫`,s=>`✨ ${s} ✨`,s=>`🎀 ${s} 🎀`,s=>`💜 ${s} 💜`,s=>`💗 ${s} 💗`,s=>`🌸• ${s} •🌸`,s=>`꧁ ${s} ꧂`,s=>`༺ ${s} ༻`,s=>`♔ ${s} ♔`,s=>`• ${s} •`
+],
+cute:[s=>`♡ ${s} ♡`,s=>`🌸 ${s} 🌸`,s=>`💖 ${s} 💖`,s=>`🎀 ${s} 🎀`,s=>`✨ ${s} ✨`,s=>`💅 ${s} 💅`,s=>`🦋 ${s} 🦋`,s=>`🌷 ${s} 🌷`,s=>`💜 ${s} 💜`,s=>`🥰 ${s} 🥰`],
+queen:[s=>`👑 ${s} 👑`,s=>`👸 ${s} 👸`,s=>`💎 ${s} 💎`,s=>`♔ ${s} ♔`,s=>`꧁༺Queen ${s} ༻꧂`,s=>`★ Queen ${s} ★`,s=>`💃 ${s} 💃`,s=>`🌟 ${s} 🌟`,s=>`🔥 ${s} 🔥`,s=>`✨ ${s} ✨`],
+soft:[s=>`🌙 ${s} 🌙`,s=>`☁️ ${s} ☁️`,s=>`💫 ${s} 💫`,s=>`🤍 ${s} 🤍`,s=>`🍂 ${s} 🍂`,s=>`🌸 ${s} 🌸`,s=>`✿ ${s} ✿`,s=>`•° ${s} °•`,s=>`💭 ${s} 💭`,s=>`🌊 ${s} 🌊`],
+urdu:[s=>`💖 ${s} 💖`,s=>`🌙 ${s} 🌙`,s=>`✨ شہزادی ${s} ✨`,s=>`💜 ${s} جان 💜`,s=>`🥀 ${s} 🥀`,s=>`💅 ${s} 💅`,s=>`👑 ${s} 👑`,s=>`🌸 ${s} 🌸`,s=>`💗 ${s} 💗`,s=>`🦋 ${s} 🦋`]
 };
 
-function styleText(text, styleIndex){
- let out=''; for(let ch of text.toLowerCase()){ if(fancyMap[ch] && fancyMap[ch][styleIndex%10]) out+=fancyMap[ch][styleIndex%10]; else out+=ch; } return out;
+const boysWraps={
+all:[s=>`꧁༒☬ ${s} ☬༒꧂`,s=>`亗 ${s} 亗`,s=>`么 ${s} 么`,s=>`×͜× ${s} ×͜×`,s=>`☬ ${s} ☬`,s=>`👑 ${s} 👑`,s=>`🔥 ${s} 🔥`,s=>`💀 ${s} 💀`,s=>`⚔️ ${s} ⚔️`,s=>`🦁 ${s} 🦁`,s=>`💣 ${s} 💣`,s=>`😎 ${s} 😎`,s=>`🚀 ${s} 🚀`,s=>`⚡ ${s} ⚡`,s=>`💎 ${s} 💎`,s=>`꧁ ${s} ꧂`,s=>`༒ ${s} ༒`,s=>`◥ ${s} ◤`,s=>`『 ${s} 』`,s=>`• ${s} •`],
+attitude:[s=>`😎 ${s} 😎`,s=>`🔥 ${s} 🔥`,s=>`💀 ${s} 💀`,s=>`👑 ${s} 👑`,s=>`⚔️ ${s} ⚔️`,s=>`🦁 ${s} 🦁`,s=>`💣 ${s} 💣`,s=>`🚀 ${s} 🚀`,s=>`⚡ ${s} ⚡`,s=>`💎 ${s} 💎`],
+pubg:[s=>`亗 ${s} 亗`,s=>`么 ${s} 么`,s=>`×͜× ${s} ×͜×`,s=>`『ᴾᴳ』 ${s}`,s=>`ᴾᴿᴼ° ${s} °`,s=>`OP ${s}`,s=>`乂 ${s} 乂`,s=>`• ${s} •`,s=>`☬ ${s} ☬`,s=>`꧁༒ ${s} ༒꧂`],
+king:[s=>`👑 King ${s} 👑`,s=>`♛ ${s} ♛`,s=>`🔱 ${s} 🔱`,s=>`👑 ${s} 👑`,s=>`💎 ${s} 💎`,s=>`🦁 ${s} 🦁`,s=>`⚡ ${s} ⚡`,s=>`🔥 ${s} 🔥`,s=>`★ ${s} ★`,s=>`꧁ King ${s} ꧂`],
+urdu:[s=>`😎 ${s} 😎`,s=>`🦁 ${s} 🦁`,s=>`👑 ${s} 👑`,s=>`🔥 ${s} 🔥`,s=>`⚔️ نواب ${s} ⚔️`,s=>`💪 ${s} 💪`,s=>`😏 ${s} 😏`,s=>`💀 ${s} 💀`,s=>`🚀 ${s} 🚀`,s=>`👊 ${s} 👊`]
+};
+
+function setGender(g){
+ gender=g;
+ if(g==='girls'){
+   document.getElementById('girlsBtn').className='girls';
+   document.getElementById('boysBtn').className='boys';
+   document.getElementById('title').innerText='💖 500+ GIRLS STYLES 💖';
+ } else {
+   document.getElementById('girlsBtn').className='girls active2';
+   document.getElementById('boysBtn').className='boys active';
+   document.getElementById('title').innerText='💙 500+ BOYS STYLES 💙';
+ }
+ subCat='all';
+ buildSubTabs();
+ generate();
 }
 
-function generateAll(){
- let name=document.getElementById('nameInput').value.trim() || 'Samama';
- let list=[];
-
- if(curTab==='names'){
-   const wrappers=[
-     s=>`꧁༒☬ ${s} ☬༒꧂`, s=>`ミ★ ${s} ★彡`, s=>`◥ ${s} ◤`, s=>`•°• ${s} •°•`, s=>`꧁༺ ${s} ༻꧂`,
-     s=>`★彡 ${s} 彡★`, s=>`☆ ${s} ☆`, s=>`༒ ${s} ༒`, s=>`☬ ${s} ☬`, s=>`♛ ${s} ♛`,
-     s=>`『 ${s} 』`, s=>`【 ${s} 】`, s=>`༄ ${s} ༄`, s=>`꧁ ${s} ꧂`, s=>`༺ ${s} ༻`
-   ];
-   for(let i=0;i<50;i++){
-     let styled=styleText(name, i);
-     let wrapped=wrappers[i%wrappers.length](styled);
-     list.push(wrapped);
-   }
-   // Add 20 extra with emojis
-   list.push(`👑 ${name} 👑`); list.push(`🔥 ${name} 🔥`); list.push(`💜 ${name} 💜`); list.push(`😎 ${name} 😎`);
-   list.push(`🦁 ${name} 🦁`); list.push(`⚡ ${name} ⚡`); list.push(`💎 ${name} 💎`); list.push(`🌙 ${name} 🌙`);
- }
-
- if(curTab==='pubg'){
-   const pubgWraps=[
-     s=>`『ᴾᴳ』 ${s}`, s=>`亗 ${s} 亗`, s=>`么 ${s} 么`, s=>`×͜× ${s} ×͜×`, s=>`꧁༒ ${s} ༒꧂`,
-     s=>`ᴾᴿᴼ° ${s} °`, s=>`OP ${s}`, s=>`乂 ${s} 乂`, s=>`• ${s} •`, s=>`☬ ${s} ☬`
-   ];
-   for(let i=0;i<40;i++){
-     let styled=styleText(name, i+2);
-     list.push(pubgWraps[i%pubgWraps.length](styled));
-   }
- }
-
- if(curTab==='caption'){
-   const caps=[
-     `${name} | Ghakhar di queen 👑🔥`, `${name} di vibe alag hai 😎💜`, `Laiba nahi, ${name} bolte hain 💅`,
-     `Punjab di kudi ${name} 🦁`, `Gujranwala da swag ${name} 😏`, `${name} | Attitude on top 💣`,
-     `Dil me ${name}, zubaan pe ${name} ❤️`, `Simple si kudi ${name} ✨`, `Nawab zadi ${name} 👑`,
-     `${name} | Not your average`, `${name} di gall baat hi alag hai 😍`, `Chaudhry ${name} 😎`,
-     `Shehzadi ${name} 🌙`, `Killer look ${name} 🔥`, `${name} | No filter`,
-     `Pehli nazar me ${name} 😍`, `${name} | Lahore nahi, Ghakhar 🔥`, `Desi kudi ${name} 💜`,
-     `Attitude wali ${name} 💅`, `${name} | Queen vibes 👑`, `Dil da maamla ${name} 💕`,
-     `${name} | Moonlight vibes 🌙`, `Sohni kudi ${name} ✨`, `Patola ${name} 🔥`,
-     `${name} | Savage mode on 😈`, `Punjabi touch ${name} 😎`, `Gujranwala ki shaan ${name} 🦁`,
-     `${name} | Dil ki baat 💬`, `${name} | Trending now 📈`, `Viral kudi ${name} 🚀`
-   ];
-   list=[...caps];
- }
-
- if(curTab==='hashtag'){
-   const hashSets=[
-     `#${name} #foryou #fyp #viral #punjabi #gujranwala #ghakhar #pakistan #trending`,
-     `#stylishname #${name}style #foryoupage #viralvideo #pgc #lahore #karachi #islamabad`,
-     `#${name} #attitude #queen #punjab #desigirl #aesthetic #instagram #tiktokpakistan`,
-     `#foryou #fypシ #${name} #viralnow #gujranwalagirl #ghakhar #punjabiculture #desi`,
-     `#${name}official #tiktokpakistan #foryou #viral #sadi #punjabi #trending #explore`,
-     `#${name} #ghakhar #gujranwala #wazirabad #lalamusa #sialkot #lahore #punjab`,
-     `#fyp #foryoupage #${name} #attitudestatus #punjabistatus #pakistani #viraltiktok`,
-     `#${name} #capcut #foryou #trending #punjabisong #desi #pakistanitiktok #viral`
-   ];
-   list=[...hashSets];
- }
-
- renderList(list);
-}
-
-function renderList(arr){
- let el=document.getElementById('list'); el.innerHTML='';
- arr.forEach(t=>{
-   let d=document.createElement('div'); d.className='card';
-   if(curTab==='hashtag'){
-     d.innerHTML=`<div class="hash">${t}</div><button class="copy" onclick="copyT(this)">COPY</button>`;
-   } else {
-     d.innerHTML=`<div class="name">${t}</div><button class="copy" onclick="copyT(this)">COPY</button>`;
-   }
+function buildSubTabs(){
+ let el=document.getElementById('subTabs'); el.innerHTML='';
+ let cats= gender==='girls' ? ['all','cute','queen','soft','urdu'] : ['all','attitude','pubg','king','urdu'];
+ cats.forEach(c=>{
+   let d=document.createElement('div'); d.className='subTab'+(c===subCat?' active':'');
+   d.innerText=c.toUpperCase(); d.onclick=()=>{subCat=c; buildSubTabs(); generate();};
    el.appendChild(d);
  });
- document.getElementById('sectionTitle').innerText = curTab==='names' ? `🔥 ${arr.length}+ WORLD FAMOUS STYLISH NAMES` : curTab==='pubg' ? `🎮 ${arr.length}+ PUBG VIRAL NAMES` : curTab==='caption' ? `📝 ${arr.length}+ TIKTOK VIRAL CAPTIONS` : `#️⃣ ${arr.length}+ VIRAL HASHTAG SETS`;
 }
 
-function copyT(btn){
- let text=btn.parentElement.firstChild.innerText;
- navigator.clipboard.writeText(text);
- btn.innerText='COPIED!'; btn.classList.add('copied');
- setTimeout(()=>{btn.innerText='COPY';btn.classList.remove('copied')},1000);
+function generate(){
+ let inputVal=document.getElementById('nameInput').value.trim();
+ let name = inputVal || '';
+ if(name===''){ document.getElementById('list').innerHTML='<p style="text-align:center;color:#555;padding:20px">👆 write name upar likho, 500 styles ayenge</p>'; document.getElementById('count').innerText='WRITE NAME TO GENERATE'; return; }
+ let wraps = gender==='girls' ? girlsWraps : boysWraps;
+ let selectedWraps = wraps[subCat] || wraps['all'];
+ let list=[];
+ for(let fontIdx=0; fontIdx<4; fontIdx++){
+   for(let wrapIdx=0; wrapIdx<selectedWraps.length; wrapIdx++){
+     let styled = fancy[fontIdx](name);
+     let final = selectedWraps[wrapIdx](styled);
+     list.push(final);
+   }
+ }
+ for(let i=0;i<450;i++){
+   let f=fancy[i%4](name);
+   let w=selectedWraps[i%selectedWraps.length];
+   list.push(w(f) + (i%9==0?' ✨':''));
+ }
+ list=[...new Set(list)].slice(0,500);
+ let container=document.getElementById('list'); container.innerHTML='';
+ document.getElementById('count').innerText=`SHOWING ${list.length} STYLES FOR ${gender.toUpperCase()}`;
+ list.forEach(t=>{
+   let d=document.createElement('div'); d.className='card '+(gender==='girls'?'girlCard':'boyCard');
+   d.innerHTML=`<div class="name">${t}</div><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.firstChild.innerText);this.innerText='COPIED';setTimeout(()=>this.innerText='COPY',1000)">COPY</button>`;
+   container.appendChild(d);
+ });
 }
-function setTab(t,el){
- curTab=t;
- document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
- el.classList.add('active');
- generateAll();
-}
-generateAll();
+
+buildSubTabs();
+generate();
 </script>
 </body>
 </html>
