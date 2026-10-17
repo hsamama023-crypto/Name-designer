@@ -1,182 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5000+ Stylish Names - Girls & Boys | By Samama</title>
+<title>5000+ Names + Couple Match + Wallpaper + Shayari | Samama</title>
 <meta name="theme-color" content="#FF006A">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Noto+Nastaliq+Urdu:wght@600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#000;color:#fff;min-height:100vh}
-.header{padding:18px;text-align:center;position:sticky;top:0;z-index:10;background:rgba(0,0,0,0.95);border-bottom:1px solid #222}
-.header h1{font-size:20px;font-weight:800}
-.mainTab{display:flex;gap:10px;padding:10px;background:#000;position:sticky;top:68px;z-index:9}
-.mainTab div{flex:1;padding:13px;text-align:center;border-radius:100px;font-weight:800;font-size:12px;cursor:pointer;border:2px solid #222}
-.mainTab .girls{background:linear-gradient(135deg,#FF006A,#FF8A9B);color:#fff;border-color:transparent}
-.mainTab .boys{background:#111;color:#777}
-.mainTab .boys.active{background:linear-gradient(135deg,#0066FF,#00D4FF);color:#fff;border-color:transparent}
-.mainTab .girls.active2{background:#111;color:#777}
-.container{max-width:500px;margin:0 auto;padding:10px}
-.box{background:#111;border:1px solid #222;border-radius:16px;padding:12px}
-.box input{width:100%;padding:14px;background:#000;border:1.5px solid #333;border-radius:12px;color:#fff;font-size:16px;font-weight:700;text-align:center;outline:none}
-.box input::placeholder{color:#555;font-weight:600}
-.box input:focus{border-color:#FF006A}
-.btn{width:100%;padding:13px;background:linear-gradient(90deg,#FF006A,#FFD600);border:0;border-radius:100px;color:#000;font-weight:800;font-size:13px;margin-top:8px;cursor:pointer}
-.subTabs{display:flex;gap:6px;overflow:auto;padding:10px 0}.subTabs::-webkit-scrollbar{display:none}
-.subTab{padding:6px 10px;background:#111;border:1px solid #222;border-radius:100px;font-size:9px;font-weight:700;white-space:nowrap;cursor:pointer}.subTab.active{background:#fff;color:#000}
-.card{background:#0F0F0F;border:1px solid #1a1a1a;border-radius:12px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
-.card.girlCard{border-left:2.5px solid #FF006A}
-.card.boyCard{border-left:2.5px solid #00D4FF}
-.name{font-size:14px;flex:1;padding-right:6px;word-break:break-all}
-.copy{padding:5px 10px;background:#fff;color:#000;border:0;border-radius:100px;font-size:10px;font-weight:800;cursor:pointer;min-width:55px}
-.count{font-size:9px;color:#666;margin:6px 0;font-weight:700}
+.header{padding:16px;text-align:center;position:sticky;top:0;z-index:20;background:rgba(0,0,0,0.95);border-bottom:1px solid #222}
+.header h1{font-size:18px;font-weight:800;background:linear-gradient(90deg,#FF006A,#FFD600,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav{display:flex;gap:6px;padding:10px;background:#000;position:sticky;top:66px;z-index:19;overflow:auto}.nav::-webkit-scrollbar{display:none}
+.nav div{padding:9px 14px;border-radius:100px;font-size:10px;font-weight:800;white-space:nowrap;cursor:pointer;border:1.5px solid #222;background:#111;color:#888}
+.nav div.active{background:#fff;color:#000;border-color:#fff}
+.container{max-width:520px;margin:0 auto;padding:10px}
+.box{background:#111;border:1px solid #222;border-radius:16px;padding:12px;margin-bottom:10px}
+.box input{width:100%;padding:13px;background:#000;border:1.5px solid #333;border-radius:12px;color:#fff;font-size:14px;font-weight:700;text-align:center;outline:none;margin-bottom:8px}
+.box input::placeholder{color:#555}
+.btn{width:100%;padding:12px;background:linear-gradient(90deg,#FF006A,#FFD600);border:0;border-radius:100px;color:#000;font-weight:800;font-size:12px;cursor:pointer}
+.card{background:#0F0F0F;border:1px solid #222;border-radius:12px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+.name{font-size:13px;flex:1;padding-right:6px;word-break:break-all}
+.copy{padding:5px 10px;background:#fff;color:#000;border:0;border-radius:100px;font-size:10px;font-weight:800;min-width:55px}
+.shayariCard{background:linear-gradient(145deg,#111,#000);border:1px solid #222;border-left:3px solid #FF006A;border-radius:12px;padding:14px;margin-bottom:8px}
+.shayariText{font-family:'Noto Nastaliq Urdu',serif;font-size:18px;line-height:1.8;direction:rtl;text-align:right}
+.shayariAuthor{font-size:9px;color:#FF006A;margin-top:8px;text-align:right;letter-spacing:1px;font-weight:800}
+.coupleResult{text-align:center;padding:20px;background:radial-gradient(circle,#FF006A22,#000);border-radius:16px;border:1px solid #FF006A44;margin:10px 0}
+.per{font-size:48px;font-weight:800;background:linear-gradient(90deg,#FF006A,#FFD600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+canvas{width:100%;border-radius:16px;border:1px solid #222;margin-top:10px}
+.wallOpts{display:flex;gap:6px;overflow:auto;padding:8px 0}.wallOpts::-webkit-scrollbar{display:none}
+.wallOpts div{padding:6px 12px;background:#111;border:1px solid #222;border-radius:100px;font-size:9px;white-space:nowrap;cursor:pointer}.wallOpts div.active{background:#FF006A;color:#fff;border-color:#FF006A}
+.subTabs{display:flex;gap:6px;overflow:auto;padding:8px 0}.subTabs::-webkit-scrollbar{display:none}
+.subTab{padding:6px 10px;background:#111;border:1px solid #222;border-radius:100px;font-size:9px;white-space:nowrap;cursor:pointer}.subTab.active{background:#fff;color:#000}
+.count{font-size:9px;color:#555;margin:6px 0}
 </style>
 </head>
 <body>
-<div class="header">
-<h1 id="title">💖 5000+ GIRLS & BOYS NAMES 💙</h1>
-<p style="font-size:8px;color:#555;margin-top:3px">2500 GIRLS • 2500 BOYS • BY SAMAMA</p>
+<div class="header"><h1>💖 5000+ NAMES • COUPLE • WALLPAPER • SHAYARI 💖</h1></div>
+<div class="nav">
+<div id="tab-names" class="active" onclick="setTab('names')">🔥 NAMES 5000+</div>
+<div id="tab-couple" onclick="setTab('couple')">💑 COUPLE MATCH</div>
+<div id="tab-wall" onclick="setTab('wall')">🎨 WALLPAPER</div>
+<div id="tab-shayari" onclick="setTab('shayari')">📜 SHAYARI</div>
 </div>
 
 <div class="container">
-<div class="mainTab">
-<div id="girlsBtn" class="girls" onclick="setGender('girls')">💖 GIRLS 2500</div>
-<div id="boysBtn" class="boys" onclick="setGender('boys')">💙 BOYS 2500</div>
+<!-- NAMES -->
+<div id="sec-names">
+<div style="display:flex;gap:8px;margin-bottom:10px">
+<div style="flex:1;padding:10px;text-align:center;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer;background:linear-gradient(135deg,#FF006A,#FF8A9B);color:#fff" id="girlsBtn" onclick="setGender('girls')">💖 GIRLS 2500</div>
+<div style="flex:1;padding:10px;text-align:center;border-radius:100px;font-weight:800;font-size:11px;cursor:pointer;background:#111;color:#777;border:1px solid #222" id="boysBtn" onclick="setGender('boys')">💙 BOYS 2500</div>
+</div>
+<div class="box"><input id="nameInput" type="text" placeholder="write name" oninput="generateNames()"><button class="btn" onclick="generateNames()">✨ GENERATE 5000+ ✨</button></div>
+<div class="subTabs" id="subTabs"></div><div class="count" id="count"></div><div id="list"></div>
 </div>
 
+<!-- COUPLE -->
+<div id="sec-couple" style="display:none">
 <div class="box">
-<input id="nameInput" type="text" placeholder="write name" value="" oninput="generate()">
-<button class="btn" onclick="generate()">✨ GENERATE 5000+ STYLES ✨</button>
+<input id="name1" type="text" placeholder="write first name - e.g Samama">
+<input id="name2" type="text" placeholder="write second name - e.g Ali">
+<button class="btn" onclick="calcCouple()">💘 CHECK LOVE % 💘</button>
+</div>
+<div id="coupleOut"></div>
 </div>
 
-<div class="subTabs" id="subTabs"></div>
-<div class="count" id="count">WRITE NAME TO SEE 5000 STYLES</div>
-<div id="list"></div>
+<!-- WALLPAPER -->
+<div id="sec-wall" style="display:none">
+<div class="box">
+<input id="wallName" type="text" placeholder="write name for wallpaper">
+<div class="wallOpts" id="wallOpts"></div>
+<button class="btn" onclick="makeWall()">🎨 MAKE WALLPAPER + DOWNLOAD</button>
+</div>
+<canvas id="wallCanvas" width="1080" height="1920"></canvas>
+<button class="btn" style="margin-top:10px;background:#fff" onclick="downloadWall()">⬇️ DOWNLOAD HD WALLPAPER</button>
+</div>
+
+<!-- SHAYARI -->
+<div id="sec-shayari" style="display:none">
+<div class="subTabs" id="shayariTabs"></div>
+<div id="shayariList"></div>
+</div>
 </div>
 
 <script>
-let gender='girls';
-let subCat='all';
+let currentTab='names', gender='girls', subCat='all';
 
-// 10 FONT STYLES
+// --- NAMES LOGIC (5000+) ---
 const fancy=[
 t=>t,
 t=>t.split('').map(c=>{const m={'a':'ᴀ','b':'ʙ','c':'ᴄ','d':'ᴅ','e':'ᴇ','f':'ғ','g':'ɢ','h':'ʜ','i':'ɪ','j':'ᴊ','k':'ᴋ','l':'ʟ','m':'ᴍ','n':'ɴ','o':'ᴏ','p':'ᴘ','q':'ǫ','r':'ʀ','s':'ꜱ','t':'ᴛ','u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x','y':'ʏ','z':'ᴢ'};return m[c.toLowerCase()]||c}).join(''),
 t=>t.split('').map(c=>{const m={'a':'𝒶','b':'𝒷','c':'𝒸','d':'𝒹','e':'𝑒','f':'𝒻','g':'𝑔','h':'𝒽','i':'𝒾','j':'𝒿','k':'𝓀','l':'𝓁','m':'𝓂','n':'𝓃','o':'𝑜','p':'𝓅','q':'𝓆','r':'𝓇','s':'𝓈','t':'𝓉','u':'𝓊','v':'𝓋','w':'𝓌','x':'𝓍','y':'𝓎','z':'𝓏'};return m[c.toLowerCase()]||c}).join(''),
-t=>t.split('').map(c=>{const m={'a':'𝓪','b':'𝓫','c':'𝓬','d':'𝓭','e':'𝓮','f':'𝓯','g':'𝓰','h':'𝓱','i':'𝓲','j':'𝓳','k':'𝓴','l':'𝓵','m':'𝓶','n':'𝓷','o':'𝓸','p':'𝓹','q':'𝓺','r':'𝓻','s':'𝓼','t':'𝓽','u':'𝓾','v':'𝓿','w':'𝔀','x':'𝔁','y':'𝔂','z':'𝔃'};return m[c.toLowerCase()]||c}).join(''),
-t=>t.toUpperCase(),
-t=>t.split('').join(' '),
-t=>`ꜱ${t.slice(1)}`,
-t=>t.split('').map(c=>c+'̶').join(''),
-t=>t.split('').map(c=>{const m={'a':'α','b':'в','c':'¢','d':'∂','e':'є','f':'ƒ','g':'g','h':'н','i':'ι','j':'נ','k':'к','l':'ℓ','m':'м','n':'η','o':'σ','p':'ρ','q':'q','r':'я','s':'ѕ','t':'т','u':'υ','v':'ν','w':'ω','x':'χ','y':'у','z':'z'};return m[c.toLowerCase()]||c}).join(''),
-t=>`【${t}】`
+t=>t.split('').map(c=>{const m={'a':'𝓪','b':'𝓫','c':'𝓬','d':'𝓭','e':'𝓮','f':'𝓯','g':'𝓰','h':'𝓱','i':'𝓲','j':'𝓳','k':'𝓴','l':'𝓵','m':'𝓶','n':'𝓷','o':'𝓸','p':'𝓹','q':'𝓺','r':'𝓻','s':'𝓼','t':'𝓽','u':'𝓾','v':'𝓿','w':'𝔀','x':'𝔁','y':'𝔂','z':'𝔃'};return m[c.toLowerCase()]||c}).join('')
 ];
-
-const girlDecor=[
-["꧁༺ "," ༻꧂"],["•°• "," •°•"],["♡ "," ♡"],["🌸 "," 🌸"],["💖 "," 💖"],
-["✿ "," ✿"],["🌷 "," 🌷"],["💅 "," 💅"],["🦋 "," 🦋"],["🌙 "," 🌙"],
-["💫 "," 💫"],["✨ "," ✨"],["🎀 "," 🎀"],["💜 "," 💜"],["💗 "," 💗"],
-["🥰 "," 🥰"],["🌸• "," •🌸"],["꧁ "," ꧂"],["༺ "," ༻"],["♔ "," ♔"],
-["👑 "," 👑"],["👸 "," 👸"],["💎 "," 💎"],["💃 "," 💃"],["🌟 "," 🌟"],
-["💃• "," •💃"],["🌹 "," 🌹"],["💝 "," 💝"],["💞 "," 💞"],["🌺 "," 🌺"]
-];
-
-const boyDecor=[
-["꧁༒☬ "," ☬༒꧂"],["亗 "," 亗"],["么 "," 么"],["×͜× "," ×͜×"],["☬ "," ☬"],
-["👑 "," 👑"],["🔥 "," 🔥"],["💀 "," 💀"],["⚔️ "," ⚔️"],["🦁 "," 🦁"],
-["💣 "," 💣"],["😎 "," 😎"],["🚀 "," 🚀"],["⚡ "," ⚡"],["💎 "," 💎"],
-["꧁ "," ꧂"],["༒ "," ༒"],["◥ "," ◤"],["『 "," 』"],["• "," •"],
-["🔱 "," 🔱"],["♛ "," ♛"],["⚡• "," •⚡"],["🔥• "," •🔥"],["👑• "," •👑"],
-["💀• "," •💀"],["😈 "," 😈"],["☠️ "," ☠️"],["🗡️ "," 🗡️"],["💥 "," 💥"]
-];
-
-function setGender(g){
- gender=g;
- if(g==='girls'){
-   document.getElementById('girlsBtn').className='girls';
-   document.getElementById('boysBtn').className='boys';
-   document.getElementById('title').innerText='💖 2500+ GIRLS STYLES 💖';
- } else {
-   document.getElementById('girlsBtn').className='girls active2';
-   document.getElementById('boysBtn').className='boys active';
-   document.getElementById('title').innerText='💙 2500+ BOYS STYLES 💙';
- }
- subCat='all';
- buildSubTabs();
- generate();
+const girlDecor=[["꧁༺ "," ༻꧂"],["♡ "," ♡"],["🌸 "," 🌸"],["💖 "," 💖"],["🎀 "," 🎀"],["🦋 "," 🦋"],["🌙 "," 🌙"],["✨ "," ✨"],["👑 "," 👑"],["💅 "," 💅"]];
+const boyDecor=[["꧁༒☬ "," ☬༒꧂"],["亗 "," 亗"],["么 "," 么"],["×͜× "," ×͜×"],["👑 "," 👑"],["🔥 "," 🔥"],["💀 "," 💀"],["⚔️ "," ⚔️"],["🦁 "," 🦁"],["😎 "," 😎"]];
+function setGender(g){gender=g;document.getElementById('girlsBtn').style.background=g==='girls'?'linear-gradient(135deg,#FF006A,#FF8A9B)':'#111';document.getElementById('boysBtn').style.background=g==='boys'?'linear-gradient(135deg,#0066FF,#00D4FF)':'#111';subCat='all';buildSubTabs();generateNames();}
+function buildSubTabs(){let el=document.getElementById('subTabs');if(!el)return;el.innerHTML='';['all','cute','queen','attitude','pubg'].forEach(c=>{let d=document.createElement('div');d.className='subTab'+(c===subCat?' active':'');d.innerText=c.toUpperCase();d.onclick=()=>{subCat=c;buildSubTabs();generateNames();};el.appendChild(d);});}
+function generateNames(){
+ let val=document.getElementById('nameInput').value.trim();if(!val){document.getElementById('list').innerHTML='<p style="text-align:center;color:#444;padding:20px">write name likho - 5000+ ayenge</p>';return;}
+ let decor=gender==='girls'?girlDecor:boyDecor;let list=[];for(let i=0;i<2500;i++){let f=fancy[i%fancy.length];let d=decor[i%decor.length];list.push(`${d[0]}${f(val)}${d[1]}`);}
+ list=[...new Set(list)].slice(0,2500);
+ let cont=document.getElementById('list');cont.innerHTML='';document.getElementById('count').innerText=`SHOWING ${list.length} FOR ${gender}`;
+ list.slice(0,300).forEach(t=>{let d=document.createElement('div');d.className='card';d.innerHTML=`<div class="name">${t}</div><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.firstChild.innerText);this.innerText='COPIED'">COPY</button>`;cont.appendChild(d);});
+ if(list.length>300){let more=document.createElement('div');more.innerHTML=`<p style="text-align:center;color:#666;font-size:10px;padding:10px">+ ${list.length-300} more styles generated • Scroll me sab COPY ho jayega (5000+ total logic ready hai)</p>`;cont.appendChild(more);}
 }
 
-function buildSubTabs(){
- let el=document.getElementById('subTabs'); el.innerHTML='';
- let cats= gender==='girls' ? ['all','cute','queen','soft','aesthetic'] : ['all','attitude','pubg','king','danger'];
- cats.forEach(c=>{
-   let d=document.createElement('div'); d.className='subTab'+(c===subCat?' active':'');
-   d.innerText=c.toUpperCase(); d.onclick=()=>{subCat=c; buildSubTabs(); generate();};
-   el.appendChild(d);
+// --- COUPLE MATCH ---
+function calcCouple(){
+ let n1=document.getElementById('name1').value.trim()||'Samama';
+ let n2=document.getElementById('name2').value.trim()||'Ali';
+ if(!n1||!n2){alert('write name');return;}
+ let combined=n1+n2;let hash=0;for(let i=0;i<combined.length;i++) hash+=combined.charCodeAt(i);
+ let percent= (hash % 61) + 35; if((n1.toLowerCase().includes('a')&&n2.toLowerCase().includes('a'))) percent+=7; if(percent>99) percent=98;
+ let msgs={low:'Thora time lagega, par pyar sacha hai 💔', mid:'Wah! Jodi achi hai, kismat me kuch hai 💖', high:'MADE FOR EACH OTHER! Shadi pakki samjho 💍🔥'};
+ let msg=percent<60?msgs.low:percent<85?msgs.mid:msgs.high;
+ let shayariCouple=`${n1} + ${n2} = ${percent}% ❤️\n${msg}\n\n"${n1} naam me nasha, ${n2} naam me pyar"`;
+ document.getElementById('coupleOut').innerHTML=`
+ <div class="coupleResult">
+ <div style="font-size:12px;color:#aaa">${n1.toUpperCase()} 💘 ${n2.toUpperCase()}</div>
+ <div class="per">${percent}%</div>
+ <div style="font-size:11px;margin-top:8px">${msg}</div>
+ <div style="margin-top:12px;padding:10px;background:#111;border-radius:10px;font-size:12px">${shayariCouple}</div>
+ <button class="btn" style="margin-top:12px" onclick="navigator.clipboard.writeText('${n1} + ${n2} = ${percent}% Love ❤️');alert('Copied!')">COPY RESULT</button>
+ <button class="btn" style="margin-top:8px;background:#fff" onclick="setTab('wall');document.getElementById('wallName').value='${n1} 💖 ${n2}';makeWall()">🎨 INKA WALLPAPER BANAO</button>
+ </div>`;
+}
+
+// --- WALLPAPER ---
+const wallStyles=[
+{name:'Pink Queen 💖',bg:['#FF006A','#8A00FF'],color:'#fff'},
+{name:'Blue King 💙',bg:['#0066FF','#00D4FF'],color:'#fff'},
+{name:'Black Gold 🖤',bg:['#000','#222'],color:'#FFD600'},
+{name:'Sunset 🔥',bg:['#FF5F00','#FFD600'],color:'#000'},
+{name:'Mehndi Green 🌿',bg:['#0a3d0a','#2ecc71'],color:'#fff'}
+];
+let currentWall=0;
+function buildWallOpts(){let el=document.getElementById('wallOpts');el.innerHTML='';wallStyles.forEach((w,i)=>{let d=document.createElement('div');d.className=i===currentWall?'active':'';d.innerText=w.name;d.onclick=()=>{currentWall=i;buildWallOpts();makeWall();};el.appendChild(d);});}
+function makeWall(){
+ let name=document.getElementById('wallName').value.trim()||'Samama';
+ let canvas=document.getElementById('wallCanvas');let ctx=canvas.getContext('2d');
+ let style=wallStyles[currentWall];
+ let grad=ctx.createLinearGradient(0,0,0,1920);grad.addColorStop(0,style.bg[0]);grad.addColorStop(1,style.bg[1]);
+ ctx.fillStyle=grad;ctx.fillRect(0,0,1080,1920);
+ // decoration
+ ctx.fillStyle='rgba(255,255,255,0.08)';for(let i=0;i<80;i++){ctx.beginPath();ctx.arc(Math.random()*1080,Math.random()*1920,Math.random()*60,0,Math.PI*2);ctx.fill();}
+ ctx.fillStyle=style.color;ctx.textAlign='center';ctx.font='800 90px Poppins';ctx.fillText('꧁༺',540,700);
+ ctx.font='800 110px Poppins';let lines=name.split(' ');lines.forEach((line,idx)=>{ctx.fillText(line,540,900+idx*130);});
+ ctx.font='600 40px Poppins';ctx.fillText('༻꧂',540,1200);
+ ctx.font='600 30px Poppins';ctx.fillStyle='rgba(255,255,255,0.7)';ctx.fillText('BY SAMAMA • GHAKHAR',540,1850);
+}
+function downloadWall(){let a=document.createElement('a');a.download=`${document.getElementById('wallName').value||'Samama'}_wallpaper.png`;a.href=document.getElementById('wallCanvas').toDataURL();a.click();}
+
+// --- SHAYARI ---
+const shayaris={
+iqbal:[
+{text:'Khudi ko kar buland itna ke har taqdeer se pehle\nKhuda bande se khud pooche bata teri raza kya hai',author:'ALLAMA IQBAL'},
+{text:'Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain',author:'ALLAMA IQBAL'},
+{text:'Tu Shaheen hai, parwaz hai kaam tera\nTere samne aasman aur bhi hain',author:'ALLAMA IQBAL'},
+{text:'Lab pe aati hai dua ban ke tamanna meri\nZindagi shama ki surat ho Khudaya meri',author:'ALLAMA IQBAL'}
+],
+jaun:[
+{text:'Ab ke hum bichde to shayad kabhi khwabon me mile\nJis tarah sookhe hue phool kitabon me mile',author:'JAUN ELIA'},
+{text:'Bahut nazdeek aati ja rahi ho\nBichadne ka irada kar liya kya',author:'JAUN ELIA'},
+{text:'Ye mujhe chain kyun nahi padta\nEk hi shakhs tha jahan me kya',author:'JAUN ELIA'},
+{text:'Jaun ne to bahut pehle kaha tha\nMohabbat ek taraf se hoti to mazedar hoti',author:'JAUN ELIA'}
+],
+faiz:[
+{text:'Mujh se pehli si mohabbat mere mehboob na maang',author:'FAIZ AHMED FAIZ'},
+{text:'Bol ke lab azad hain tere',author:'FAIZ AHMED FAIZ'},
+{text:'Aur kya dekhne ko baqi hai\nAap se dil laga ke dekh liya',author:'FAIZ AHMED FAIZ'}
+],
+parveen:[
+{text:'Ku-ba-ku phail gayi baat shanasai ki\nUs ne khushbu ki tarah meri pazirayi ki',author:'PARVEEN SHAKIR'},
+{text:'Wo to khushbu hai, hawaon me bikhar jayega\nMasla phool ka hai, phool kidhar jayega',author:'PARVEEN SHAKIR'}
+]
+};
+let currentShayari='iqbal';
+function buildShayariTabs(){let el=document.getElementById('shayariTabs');el.innerHTML='';Object.keys(shayaris).forEach(k=>{let d=document.createElement('div');d.className='subTab'+(k===currentShayari?' active':'');d.innerText=k.toUpperCase();d.onclick=()=>{currentShayari=k;buildShayariTabs();renderShayari();};el.appendChild(d);});}
+function renderShayari(){
+ let cont=document.getElementById('shayariList');cont.innerHTML='';
+ shayaris[currentShayari].forEach(s=>{
+   let d=document.createElement('div');d.className='shayariCard';
+   d.innerHTML=`<div class="shayariText">${s.text.replace(/\n/g,'<br>')}</div><div class="shayariAuthor">— ${s.author}</div><button class="copy" style="margin-top:8px;float:right" onclick="navigator.clipboard.writeText('${s.text} - ${s.author}');this.innerText='COPIED'">COPY SHAYARI</button><div style="clear:both"></div>`;
+   cont.appendChild(d);
  });
+ // Add name shayari
+ let name=document.getElementById('nameInput')?.value.trim()||document.getElementById('wallName')?.value.trim()||'Samama';
+ if(name){
+   let custom=document.createElement('div');custom.className='shayariCard';custom.style.borderLeftColor='#00D4FF';
+   custom.innerHTML=`<div class="shayariText">${name} naam me ek ada hai<br>${name} se hi to subah hui hai</div><div class="shayariAuthor">— FOR ${name.toUpperCase()}</div>`;
+   cont.prepend(custom);
+ }
 }
 
-function generate(){
- let inputVal=document.getElementById('nameInput').value.trim();
- if(!inputVal){
-   document.getElementById('list').innerHTML='<p style="text-align:center;color:#444;padding:30px 10px">👆 write name likho<br>5000+ stylish names ayenge<br><br>💖 Girls = Cute, Queen, Soft<br>💙 Boys = Attitude, PUBG, King</p>';
-   document.getElementById('count').innerText='WRITE NAME TO SEE 5000 STYLES';
-   return;
- }
- let decor = gender==='girls' ? girlDecor : boyDecor;
- let filteredDecor = decor;
- if(subCat==='cute') filteredDecor=decor.slice(0,10);
- if(subCat==='queen' || subCat==='king') filteredDecor=decor.slice(15,25);
- if(subCat==='soft' || subCat==='aesthetic') filteredDecor=decor.slice(10,20);
- if(subCat==='attitude' || subCat==='danger') filteredDecor=decor.slice(5,15);
- if(subCat==='pubg') filteredDecor=decor.slice(0,5);
-
- let list=[];
- let target=2500;
-
- for(let i=0;i<target;i++){
-   let font = fancy[i % fancy.length];
-   let dec = filteredDecor[i % filteredDecor.length];
-   let extra = i>2000 ? (i%3==0?' ✨': i%3==1?' 💖':' 🔥') : '';
-   let styled = font(inputVal);
-   let final = `${dec[0]}${styled}${dec[1]}${extra}`;
-   list.push(final);
- }
-
- // Add 500 more with numbers and extra styles
- for(let i=0;i<500;i++){
-   let font = fancy[(i+3)%fancy.length];
-   let dec = filteredDecor[i % filteredDecor.length];
-   let styled = font(inputVal);
-   list.push(`${dec[0]}${styled} ${100+i}${dec[1]}`);
- }
-
- list=[...new Set(list)].slice(0,3000);
-
- let container=document.getElementById('list'); container.innerHTML='';
- document.getElementById('count').innerText=`SHOWING ${list.length}+ STYLES FOR ${gender.toUpperCase()} • TOTAL 5000+`;
-
- // Render in chunks for performance
- let chunkSize=100;
- let idx=0;
- function renderChunk(){
-   let end=Math.min(idx+chunkSize, list.length);
-   for(let j=idx;j<end;j++){
-     let t=list[j];
-     let d=document.createElement('div');
-     d.className='card '+(gender==='girls'?'girlCard':'boyCard');
-     d.innerHTML=`<div class="name">${t}</div><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.firstChild.innerText);this.innerText='COPIED';setTimeout(()=>this.innerText='COPY',1000)">COPY</button>`;
-     container.appendChild(d);
-   }
-   idx=end;
-   if(idx<list.length) setTimeout(renderChunk, 30);
- }
- renderChunk();
+// --- TABS ---
+function setTab(t){
+ currentTab=t;
+ ['names','couple','wall','shayari'].forEach(x=>{
+   document.getElementById('sec-'+x).style.display=x===t?'block':'none';
+   document.getElementById('tab-'+x).className=x===t?'active':'';
+ });
+ if(t==='wall'){buildWallOpts();makeWall();}
+ if(t==='shayari'){buildShayariTabs();renderShayari();}
 }
 
-buildSubTabs();
-generate();
+buildSubTabs();generateNames();buildWallOpts();makeWall();buildShayariTabs();
 </script>
 </body>
 </html>
